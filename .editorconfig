@@ -1,0 +1,29 @@
+# EditorConfig helps developers define and maintain consistent
+# coding styles between different editors and IDEs
+# http://editorconfig.org/
+
+root = true
+
+# -- Personal preferences.
+[*]
+indent_size = 2
+indent_style = space
+max_line_length = 80
+# -- Recommended preferences.
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# Markdown.
+[*.md]
+trim_trailing_whitespace = false
+
+# Dot files & more.
+[*.{json,yml,md,babelrc,eslintrc,lintstagedrc,remarkrc}]
+indent_style = space
+indent_size = 2
+
+# HTML
+[*.html]
+quote_type = double
