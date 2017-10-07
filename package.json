@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "author": "Jordan McArdle <jordan@mcardle.tech> (http://mcardle.tech/)",
   "description": "http://mcardle.tech/",
-  "homepage": "https://github.com/jmahc/jmahc.github.io#readme",
+  "homepage": "http://mcardle.tech/",
   "main": "src/index.js",
   "files": ["dist", "dll"],
   "scripts": {
