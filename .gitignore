@@ -2,7 +2,7 @@
 /node_modules
 
 # build folder (production)
-/dist
+# /dist
 
 # DLL folder (development)
 /dll
