@@ -1,5 +1,5 @@
 const getResumeData = () => ({
-  data: 'Resumè data.'
+  data: 'grab résumè data from google docs api'
 })
 
 export default getResumeData
