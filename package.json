@@ -13,6 +13,7 @@
     "clean-dist": "rm -rf ./dist/*",
     "clean-dll": "del /q dll\\*",
     "clean-yarn": "rm -rf node_modules yarn.lock .yarnclean yarn-error.log ./**/*.DS_STORE ./.DS_STORE",
+    "deploy": "gh-pages -d dist",
     "dev": "rm -rf ./dll/* && cross-env NODE_ENV=development webpack --profile --progress --env development --config ./config/webpack.config.vendor.babel.js",
     "format": "prettier-standard 'src/**/*.js' && prettier-standard 'src/**/*.jsx'",
     "postmerge": "yarn",
