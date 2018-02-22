@@ -1,9 +1,8 @@
-import glob from 'glob'
 import merge from 'webpack-merge'
 import webpack from 'webpack'
 
-import InlineChunkManifestHtmlWebpackPlugin from 'inline-chunk-manifest-html-webpack-plugin'
 import CompressionPlugin from 'compression-webpack-plugin'
+import InlineChunkManifestHtmlWebpackPlugin from 'inline-chunk-manifest-html-webpack-plugin'
 import OptimizeCSSPlugin from 'optimize-css-assets-webpack-plugin'
 import PreloadWebpackPlugin from 'preload-webpack-plugin'
 import PurifyCSSPlugin from 'purifycss-webpack'
@@ -11,7 +10,7 @@ import WebpackChunkHash from 'webpack-chunk-hash'
 
 import isVendor from './isVendor.babel'
 import PATHS from './paths.babel'
-import { extractCss, setFreeVariable } from './webpack.config.parts.babel'
+import { extractCss } from './webpack.config.parts.babel'
 
 const productionConfig = merge([
   extractCss({
@@ -19,13 +18,11 @@ const productionConfig = merge([
     exclude: /node_modules/,
     options: {
       config: {
-        path: PATHS.postCSS
+        path: PATHS.postCssConfig
       }
     }
   }),
-  setFreeVariable('process.env.NODE_ENV', 'production'),
   {
-    devtool: 'source-map',
     output: {
       chunkFilename: '[name].[chunkhash].js',
       filename: '[name].[chunkhash].js',
@@ -47,15 +44,15 @@ const productionConfig = merge([
       // Remove unused CSS.
       new PurifyCSSPlugin({
         minimize: false,
-        moduleExtensions: ['.html'],
-        paths: glob.sync(`${PATHS.app}/**/*.jsx`),
+        moduleExtensions: ['.html', '.ejs'],
+        paths: PATHS.purifyCssPaths,
         purifyOptions: {
           info: true,
           minify: true,
           output: false,
           rejected: true
         },
-        styleExtensions: ['.css']
+        styleExtensions: ['.css', '.scss', '.sass']
       }),
       new OptimizeCSSPlugin({
         cssProcessorOptions: {

@@ -1,7 +1,8 @@
 import React from 'react'
 
-import image from './profile-picture.png'
-import './ProfilePicture.css'
+import image from '%/assets/images/profile-picture.png'
+
+import './styles.css'
 
 const ProfilePicture = () => (
   <div className="ProfilePicture">

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './Link.css'
+import './styles.css'
 
 const Link = props => (
   <a

@@ -1,5 +1,5 @@
-import webpack from 'webpack'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
+import webpack from 'webpack'
 
 const devServer = ({ port, publicPath, stats } = {}) => ({
   devServer: {

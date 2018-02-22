@@ -1,21 +1,16 @@
 import webpack from 'webpack'
 
+import entries from './dependencies.babel'
 import PATHS from './paths.babel'
 
-const vendorFileName = 'vendors.dll.js'
 const vendorLibraryName = 'vendors_lib'
 
 const vendorConfig = {
   context: PATHS.root,
   devtool: '#source-map',
-  entry: [
-    'react',
-    'react-dom',
-    'prop-types',
-    'promise'
-  ],
+  entry: entries,
   output: {
-    filename: vendorFileName,
+    filename: 'vendors.dll.js',
     library: vendorLibraryName,
     path: PATHS.dll
   },

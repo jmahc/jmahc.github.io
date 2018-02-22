@@ -1,18 +1,41 @@
 import merge from 'webpack-merge'
-import path from 'path'
 import webpack from 'webpack'
+
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 
-import { lintJavaScript, loadJavaScript } from './webpack.config.parts.babel'
 import PATHS from './paths.babel'
 import stats from './stats.babel'
+import {
+  lintJavaScript,
+  loadJavaScript,
+  setFreeVariable
+} from './webpack.config.parts.babel'
 
 const isProduction = process.env.NODE_ENV === 'production'
 
 const commonsConfig = merge([
+  setFreeVariable(
+    'process.env.NODE_ENV',
+    isProduction ? 'production' : 'development'
+  ),
+  // lintJavaScript({
+  //   include: PATHS.app,
+  //   exclude: PATHS.nodeModules,
+  //   options: {
+  //     failOnError: false,
+  //     failOnWarning: false,
+  //     quiet: false
+  //   }
+  // }),
+  loadJavaScript({
+    include: PATHS.app,
+    exclude: /node_modules/,
+    query: PATHS.babelConfig
+  }),
   {
     bail: true,
     context: PATHS.app,
+    devtool: isProduction ? 'source-map' : '#cheap-module-eval-source-map',
     entry: {
       app: [
         isProduction ? PATHS.polyfills : 'react-hot-loader/patch',
@@ -68,11 +91,12 @@ const commonsConfig = merge([
           useShortDoctype: true
         },
         seo: {
-          description: 'This is a description of the website.',
-          image: 'http://my-website.lol/og-image.jpg',
-          title: 'that-react-app-you-want',
-          twitter_handle: '@myTwitterHandle',
-          url: 'http://my-website.lol/'
+          description: "Jordan McArdle's portfolio site.",
+          // TODO - Update this profile picture.
+          image: 'http://mcardle.tech/profile-picture.png',
+          title: 'jmahc.github.io',
+          twitter_handle: '@j_mahc',
+          url: 'http://mcardle.tech/'
         },
         template: PATHS.indexHtml,
         title: 'That react app you want'
@@ -81,16 +105,18 @@ const commonsConfig = merge([
     ],
     resolve: {
       alias: {
-        '@': PATHS.app
+        '@': PATHS.app,
+        '%': PATHS.shared,
+        '#': PATHS.styles
       },
       aliasFields: ['browser'],
       descriptionFiles: ['package.json'],
       enforceExtension: false,
       enforceModuleExtension: false,
-      extensions: ['.js', '.jsx', '.json'],
+      extensions: ['.js', '.json', '.ejs'],
       mainFields: ['browser', 'module', 'main'],
       mainFiles: ['index'],
-      modules: [PATHS.app, 'node_modules'],
+      modules: ['node_modules', PATHS.app, 'containers', 'components'],
       symlinks: true
     },
     stats,
@@ -108,21 +134,7 @@ const commonsConfig = merge([
       tls: 'empty'
     },
     target: 'web'
-  },
-  lintJavaScript({
-    include: PATHS.app,
-    exclude: PATHS.nodeModules,
-    options: {
-      failOnError: false,
-      failOnWarning: false,
-      quiet: false
-    }
-  }),
-  loadJavaScript({
-    include: PATHS.app,
-    exclude: /node_modules/,
-    query: PATHS.babelConfig
-  })
+  }
 ])
 
 export default commonsConfig

@@ -1,26 +1,20 @@
-import merge from 'webpack-merge'
-import path from 'path'
-import webpack from 'webpack'
 import AddAssetHtmlPlugin from 'add-asset-html-webpack-plugin'
 import CaseSensitivePathsPlugin from 'case-sensitive-paths-webpack-plugin'
-
 import FriendlyErrorsPlugin from 'friendly-errors-webpack-plugin'
+
+import merge from 'webpack-merge'
+import webpack from 'webpack'
 
 import isVendor from './isVendor.babel'
 import PATHS from './paths.babel'
 import stats from './stats.babel'
-import {
-  devServer,
-  loadCss,
-  setFreeVariable
-} from './webpack.config.parts.babel'
+import { devServer, loadCss } from './webpack.config.parts.babel'
 
 const isProduction = process.env.NODE_ENV === 'production'
-const PORT_NUMBER = process.env.PORT_NUMBER
 
 const developmentConfig = merge([
   devServer({
-    port: PORT_NUMBER,
+    port: process.env.PORT_NUMBER,
     publicPath: PATHS.publicPath,
     stats
   }),
@@ -29,13 +23,11 @@ const developmentConfig = merge([
     exclude: /node_modules/,
     options: {
       config: {
-        path: PATHS.postCSS
+        path: PATHS.postCssConfig
       }
     }
   }),
-  setFreeVariable('process.env.NODE_ENV', 'development'),
   {
-    devtool: '#cheap-module-eval-source-map',
     output: {
       chunkFilename: '[id].chunk.js',
       filename: '[name].js',

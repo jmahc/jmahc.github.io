@@ -2,7 +2,7 @@ import React from 'react'
 
 import Link from '@/components/Link'
 
-import './Header.css'
+import './styles.css'
 
 const links = {
   github: {
