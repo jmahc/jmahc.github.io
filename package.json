@@ -53,6 +53,7 @@
     "friendly-errors-webpack-plugin": "^1.6.1",
     "generact": "^0.3.1",
     "html-webpack-plugin": "^2.30.1",
+    "html-webpack-include-assets-plugin": "^1.0.2",
     "husky": "^0.14.3",
     "inline-chunk-manifest-html-webpack-plugin": "^2.0.0",
     "lint-staged": "^7.0.0",
