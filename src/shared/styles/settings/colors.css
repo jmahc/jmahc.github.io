@@ -1,0 +1,11 @@
+:root {
+  --color-background: rgb(207, 207, 207);
+  --color-black: rgb(0, 0, 0);
+  --color-blue: #011627;
+  --color-orange: #ff0022;
+  --color-green: #41ead4;
+  --color-white: #fdfffc;
+  --color-red: #b91372;
+
+  --font-copy: 'Helvetica';
+}

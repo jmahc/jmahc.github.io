@@ -1,8 +1,30 @@
 @import 'normalize.css';
+@import 'settings/index.css';
+
+html,
+body,
+#⚛️ {
+  height: 100%;
+  overflow-x: hidden;
+  position: relative;
+  z-index: var(--z-base);
+
+  background-color: var(--color-background);
+}
+
+*,
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: var(--color-black);
+  font-family: var(--font-copy);
+  box-sizing: border-box;
+}
 
 body {
-  background-color: #303030;
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
+  background-color: var(--color-white);
+  /* margin: 0;
+  padding: 0; */
 }

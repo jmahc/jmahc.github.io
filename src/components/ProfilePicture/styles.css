@@ -1,14 +1,12 @@
-.ProfilePicture {
-  margin: 20px auto;
-  width: 10%;
+@import 'settings/z-index.css';
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.ProfilePicture {
+  z-index: var(--z-picture);
+  position: absolute;
+  /* right: 0; */
 }
 
 .ProfilePicture-image {
-  border-radius: 50%;
-  width: 100%;
+  /* width: 100%; */
+  max-height: 100vh;
 }

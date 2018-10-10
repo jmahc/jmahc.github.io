@@ -1,0 +1,11 @@
+:root {
+  --z-base: 1;
+
+  /*
+    Images
+    - In order from lowest to highest.
+  */
+  --z-picture: calc(var(--z-base) + 1);
+  --z-outline: calc(var(--z-base) + 2);
+  --z-overlay: calc(var(--z-base) + 3);
+}

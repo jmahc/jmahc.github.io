@@ -1,0 +1,5 @@
+@import 'TheBoldFont.css';
+
+:root {
+  --font-theboldfont: 'TheBoldFont' 'Helvetica Neue', 'Helvetica' sans-serif;
+}

@@ -1,0 +1,12 @@
+:root {
+  --slide-amount: 2.5px;
+}
+
+@keyframes slideImage {
+  from {
+    transform: translateX(calc(var(--slide-amount) * -1));
+  }
+  to {
+    transform: translateX(var(--slide-amount));
+  }
+}

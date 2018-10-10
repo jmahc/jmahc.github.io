@@ -1,10 +1,12 @@
 import React from 'react'
 
+// import Flex from '@/components/Flex'
+
 import image from '%/assets/images/profile-picture.png'
 
 import './styles.css'
 
-const ProfilePicture = () => (
+export default () => (
   <div className="ProfilePicture">
     <img
       alt="Site owner: Jordan McArdle."
@@ -14,4 +16,14 @@ const ProfilePicture = () => (
   </div>
 )
 
-export default ProfilePicture
+// export default () => (
+//   <Flex fill alignCenter justifyContent>
+//     <div className="ProfilePicture">
+//       <img
+//         alt="Site owner: Jordan McArdle."
+//         className="ProfilePicture-image"
+//         src={image}
+//       />
+//     </div>
+//   </Flex>
+// )

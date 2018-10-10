@@ -1,0 +1,30 @@
+.Flex {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.Flex--fill {
+  width: 100%;
+}
+.Flex--alignCenter {
+  align-items: center;
+}
+.Flex--alignBaseLine {
+  align-items: baseline;
+}
+.Flex--alignEnd {
+  align-items: flex-end;
+}
+.Flex--column {
+  flex-direction: column;
+}
+.Flex--justifyCenter {
+  justify-content: center;
+}
+.Flex--justifyEnd {
+  justify-content: flex-end;
+}
+.Flex--wrap {
+  flex-wrap: wrap;
+}

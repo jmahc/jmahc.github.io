@@ -1,0 +1,16 @@
+@import 'settings/index.css';
+
+.Outline {
+  z-index: var(--z-outline);
+  position: absolute;
+  /* right: 0; */
+}
+
+.Outline-image {
+  animation-duration: 0.5s;
+  animation-name: slideImage;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+
+  max-height: 100vh;
+}

@@ -10,6 +10,8 @@ module.exports = {
       browsers: 'last 2 versions',
       warnForDuplicates: false
     },
-    cssnano: {}
+    cssnano: {
+      zindex: false
+    }
   }
 }

@@ -1,14 +1,30 @@
+@import 'settings/index.css';
+
 .App {
-  text-align: center;
+  min-height: 100%;
+  height: 100vh;
+
+  /* background-image: url('../../shared/assets/images/profile-picture.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain; */
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.App-font {
+  font-family: var(--font-theboldfont);
+  size: 2rem;
+  color: black;
 }
 
-.App-intro {
-  font-size: large;
+.App-content {
+  position: absolute;
+
+  margin-left: 10vh;
+  width: 100%;
+}
+
+.App-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
 }
