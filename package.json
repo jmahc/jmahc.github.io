@@ -2,14 +2,15 @@
   "name": "jmahc.github.io",
   "version": "0.2.0",
   "author": "Jordan McArdle <jordan@mcardle.tech> (http://mcardle.tech/)",
-  "description": "https://mcardle.tech/",
-  "homepage": "https://github.com/jmahc/jmahc.github.io#readme",
+  "description": "Portfolio site for me.",
+  "homepage": "https://mcardle.tech/",
   "scripts": {
     "dev": "next",
     "build": "next build",
     "start": "next start",
     "export": "next export",
-    "deploy": "rm -rf node_modules/.cache && rm -rf out && next build && next export && touch out/.nojekyll && touch out/CNAME && echo \"mcardle.tech\" >> out/CNAME && git add out/ && git commit -m \"Deploy Next.js to gh-pages\" && git subtree push --prefix out origin gh-pages"
+    "deploy": "rm -rf node_modules/.cache && rm -rf out && next build && next export && touch out/.nojekyll  && touch out/CNAME && echo \"mcardle.tech\" >> out/CNAME && gh-pages -d out",
+    "deploy-old": "rm -rf node_modules/.cache && rm -rf out && next build && next export && touch out/.nojekyll && touch out/CNAME && echo \"mcardle.tech\" >> out/CNAME && git add out/ && git commit -m \"Deploy Next.js to gh-pages\" && git subtree push --prefix out origin gh-pages"
   },
   "dependencies": {
     "next": "latest",
