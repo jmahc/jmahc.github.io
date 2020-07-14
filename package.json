@@ -2,7 +2,7 @@
   "name": "jmahc.github.io",
   "version": "0.2.0",
   "author": "Jordan McArdle <jordan@mcardle.tech> (http://mcardle.tech/)",
-  "description": "http://mcardle.tech/",
+  "description": "https://mcardle.tech/",
   "homepage": "https://github.com/jmahc/jmahc.github.io#readme",
   "scripts": {
     "dev": "next",
