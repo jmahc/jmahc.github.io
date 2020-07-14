@@ -3,7 +3,7 @@
 [![Dependencies]](https://david-dm.org/jmahc/jmahc.github.io)
 [![devDependencies Status]](https://david-dm.org/jmahc/jmahc.github.io?type=dev)
 
-[![license]](http://opensource.org/licenses/MIT)
+[![license]](http://opensource.org/licenses/ISC)
 [![semantic-release]](https://github.com/semantic-release/semantic-release)
 
 ---
