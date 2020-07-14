@@ -1,19 +1,14 @@
 import Link from 'next/link'
 
+import Video from '@/components/Video'
+
 export default function About() {
   return (
     <>
       <main>
         <section className="relative block" style={{ height: '500px' }}>
-          <div
-            className="absolute top-0 w-full h-full bg-center bg-cover"
-            style={{
-              backgroundImage:
-                "url('https://images.unsplash.com/photo-1499336315816-097655dcfbda?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2710&q=80')",
-            }}>
-            <span
-              id="blackOverlay"
-              className="w-full h-full absolute opacity-50 bg-black"></span>
+          <div className="absolute top-0 w-full h-full bg-center bg-cover">
+            <Video className="w-full h-full absolute opacity-50 bg-black" />
           </div>
           <div
             className="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden"

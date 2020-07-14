@@ -1,0 +1,5 @@
+.bgVideo {
+  position: fixed;
+  top: -200px;
+  z-index: -1;
+}
