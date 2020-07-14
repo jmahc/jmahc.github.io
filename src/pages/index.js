@@ -9,7 +9,8 @@ export default function Home() {
         <Button color="gray" />
       </div>
       {/*
-      <img src="/500.png" alt="500x500 image" className="main-photo" />
+        <img src="/500.png" alt="500x500 image" className="main-photo" />
+        <Video />
       */}
     </div>
   )
