@@ -11,5 +11,6 @@ module.exports = {
   //     "/about": { page: "/about" },
   //   }
   // },
-  assetPrefix: !debug ? '/jmahc.github.io/' : '',
+  // assetPrefix: !debug ? '/jmahc.github.io/' : '',
+  assetPrefix: !debug ? '/' : '',
 }
