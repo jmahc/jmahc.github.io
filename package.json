@@ -3,14 +3,16 @@
   "version": "0.2.0",
   "author": "Jordan McArdle <jordan@mcardle.tech> (http://mcardle.tech/)",
   "description": "Portfolio site for me.",
-  "homepage": "https://mcardle.tech/",
+  "homepage": "https://jmahc.github.io",
   "scripts": {
     "dev": "next",
     "build": "next build",
     "start": "next start",
     "export": "next export",
     "precommit": "lint-staged",
-    "deploy": "rm -rf node_modules/.cache && rm -rf out && next build && next export && touch out/.nojekyll && touch out/CNAME && echo \"mcardle.tech\" >> out/CNAME && git add out/ && git commit -m \"Deploy Next.js to gh-pages\" && git subtree push --prefix out origin master",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d build",
+    "deploy_og": "rm -rf node_modules/.cache && rm -rf out && next build && next export && touch out/.nojekyll && touch out/CNAME && echo \"mcardle.tech\" >> out/CNAME && git add out/ && git commit -m \"Deploy Next.js to gh-pages\" && git subtree push --prefix out origin master",
     "deploy-old": "rm -rf node_modules/.cache && rm -rf out && next build && next export && touch out/.nojekyll  && touch out/CNAME && echo \"mcardle.tech\" >> out/CNAME && gh-pages -d out"
   },
   "dependencies": {
