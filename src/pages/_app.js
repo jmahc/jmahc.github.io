@@ -4,7 +4,7 @@ import Head from 'next/head'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
-import '#/index.css'
+import '../styles/index.css'
 
 import '@fortawesome/fontawesome-free/css/all.min.css'
 

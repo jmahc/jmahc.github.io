@@ -1,0 +1,8 @@
+.sectionHeight {
+  height: 500px;
+}
+
+.sectionSvg {
+  height: 70px;
+  transform: translateZ(0px);
+}
