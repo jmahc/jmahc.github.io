@@ -1,6 +1,11 @@
 // import styles from './Button.module.css'
 
-export default function Button({ color }) {
+/**
+ * A random button for the home page.
+ * @param {Object} props - Button component props.
+ * @param {type} props.color - The color for the button that can be either 'blue' or 'gray'.
+ */
+export default function Button({ color = 'blue' }) {
   return (
     <button
       type="button"

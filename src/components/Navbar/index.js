@@ -1,4 +1,4 @@
-import React from 'react'
+import Link from 'next/link'
 
 export default function Navbar(props) {
   const [navbarOpen, setNavbarOpen] = React.useState(false)
@@ -14,13 +14,15 @@ export default function Navbar(props) {
         }>
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
-            <span
-              className={
-                (props.transparent ? 'text-white' : 'text-gray-800') +
-                ' text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap uppercase'
-              }>
-              Shalito Page
-            </span>
+            <Link href="/">
+              <a
+                className={
+                  (props.transparent ? 'text-white' : 'text-gray-800') +
+                  ' text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap uppercase hover:text-gray-600'
+                }>
+                Shalito Page
+              </a>
+            </Link>
             <button
               className="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
               type="button"
@@ -40,24 +42,25 @@ export default function Navbar(props) {
             id="example-navbar-warning">
             <ul className="flex flex-col lg:flex-row list-none mr-auto">
               <li className="flex items-center">
-                <a
-                  className={
-                    (props.transparent
-                      ? 'lg:text-white lg:hover:text-gray-300 text-gray-800'
-                      : 'text-gray-800 hover:text-gray-600') +
-                    ' px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold'
-                  }
-                  href="https://www.creative-tim.com/learning-lab/tailwind-starter-kit#/profile">
-                  <i
+                <Link href="/about">
+                  <a
                     className={
                       (props.transparent
-                        ? 'lg:text-gray-300 text-gray-500'
-                        : 'text-gray-500') +
-                      ' far fa-file-alt text-lg leading-lg mr-2'
-                    }
-                  />{' '}
-                  Docs
-                </a>
+                        ? 'lg:text-white lg:hover:text-gray-300 text-gray-800'
+                        : 'text-gray-800 hover:text-gray-600') +
+                      ' px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold'
+                    }>
+                    <i
+                      className={
+                        (props.transparent
+                          ? 'lg:text-gray-300 text-gray-500'
+                          : 'text-gray-500') +
+                        ' far fa-file-alt text-lg leading-lg mr-2'
+                      }
+                    />
+                    About
+                  </a>
+                </Link>
               </li>
             </ul>
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
@@ -69,49 +72,7 @@ export default function Navbar(props) {
                       : 'text-gray-800 hover:text-gray-600') +
                     ' px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold'
                   }
-                  href="#pablo">
-                  <i
-                    className={
-                      (props.transparent
-                        ? 'lg:text-gray-300 text-gray-500'
-                        : 'text-gray-500') +
-                      ' fab fa-facebook text-lg leading-lg '
-                    }
-                  />
-                  <span className="lg:hidden inline-block ml-2">Share</span>
-                </a>
-              </li>
-
-              <li className="flex items-center">
-                <a
-                  className={
-                    (props.transparent
-                      ? 'lg:text-white lg:hover:text-gray-300 text-gray-800'
-                      : 'text-gray-800 hover:text-gray-600') +
-                    ' px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold'
-                  }
-                  href="#pablo">
-                  <i
-                    className={
-                      (props.transparent
-                        ? 'lg:text-gray-300 text-gray-500'
-                        : 'text-gray-500') +
-                      ' fab fa-twitter text-lg leading-lg '
-                    }
-                  />
-                  <span className="lg:hidden inline-block ml-2">Tweet</span>
-                </a>
-              </li>
-
-              <li className="flex items-center">
-                <a
-                  className={
-                    (props.transparent
-                      ? 'lg:text-white lg:hover:text-gray-300 text-gray-800'
-                      : 'text-gray-800 hover:text-gray-600') +
-                    ' px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold'
-                  }
-                  href="#pablo">
+                  href="https://github.com/jmahc/jmahc.github.io/tree/dev#jmahcgithubio">
                   <i
                     className={
                       (props.transparent

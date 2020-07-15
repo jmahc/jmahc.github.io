@@ -5,19 +5,19 @@
   "description": "Portfolio site for me.",
   "homepage": "https://jmahc.github.io",
   "scripts": {
-    "dev": "next",
     "build": "next build",
-    "start": "next start",
+    "clean": "rm -rf node_modules/.cache && rm -rf out",
+    "clean:cache": "rm -rf node_modules/.cache",
+    "clean:out": "rm -rf out",
+    "dev": "next",
+    "deploy": "./scripts/deploy.sh",
     "export": "next export",
     "precommit": "lint-staged",
-    "predeploy": "rm -rf node_modules/.cache && rm -rf out && next build && next export && touch out/.nojekyll && touch out/CNAME && echo \"mcardle.tech\" >> out/CNAME",
-    "deploy": "gh-pages -b master -d out",
-    "deploy-from-article": "gh-pages -b master -d out",
-    "deploy_og": "rm -rf node_modules/.cache && rm -rf out && next build && next export && touch out/.nojekyll && touch out/CNAME && echo \"mcardle.tech\" >> out/CNAME && git add out/ && git commit -m \"Deploy Next.js to gh-pages\" && git subtree push --prefix out origin master"
+    "start": "next start"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.13.1",
-    "next": "latest",
+    "next": "^9.4.4",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "tailwindcss": "^1.4.6"
