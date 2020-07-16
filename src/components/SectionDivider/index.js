@@ -1,11 +1,15 @@
 import React from 'react'
 
+import Video from '@/components/Video'
+
 import styles from './SectionDivider.module.css'
 
 export default function SectionDivider() {
   return (
     <section className={`relative block ${styles.sectionHeight}`}>
-      <div className="absolute top-0 w-full h-full bg-center bg-cover"></div>
+      <div className="absolute top-0 w-full h-full bg-center bg-cover">
+        <Video />
+      </div>
       <div
         className={`top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden ${styles.sectionSvg}`}>
         <svg
