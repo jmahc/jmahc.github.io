@@ -1,4 +1,4 @@
-const defaultText =
+const loremIpsum =
   'Lorem Khaled Ipsum is a major key to success.' +
   ' Eliptical talk. The key to more success is to have a lot of pillows.' +
   ' To succeed you must believe. When you believe, you will succeed.' +
@@ -10,10 +10,14 @@ const defaultText =
   ' I told you all this before, when you have a swimming pool,' +
   ' do not use chlorine, use salt water, the healing, salt water is the healing.'
 
-// api/about
-export default function aboutApi(req, res) {
-  const headsOrTails = Math.floor(Math.random() * 2) == 0
-  const text = headsOrTails ? 'Shalitoooooooooo' : defaultText
+const shalito = 'Shalitoooooooooo'
 
-  return res.status(200).json({ text })
+const obj = {
+  loremIpsum,
+  shalito,
+}
+
+export default function getAboutMeText() {
+  let keys = Object.keys(obj)
+  return obj[keys[(keys.length * Math.random()) << 0]]
 }
