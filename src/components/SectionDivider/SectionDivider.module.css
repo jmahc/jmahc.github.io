@@ -1,5 +1,6 @@
 .sectionHeight {
   height: 500px;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .sectionSvg {
