@@ -13,5 +13,5 @@ echo 'Export the project to the output directory'
 # Use the `gh-pages` module to push the output directory
 # to the `master` branch, as this is a project that uses
 # my Github name
-# echo 'Pushing the output directory to the master branch'
+echo 'Pushing the output directory to the master branch'
 # ./node_modules/.bin/gh-pages -b master -d out
