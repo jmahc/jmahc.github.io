@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 import SectionDivider from '@/components/SectionDivider'
 import { FactSmall, FactWithIcon } from '@/components/Facts'
-// import Video from '@/components/Video'
+import { AboutMeText } from '@/components/Text'
 
 export default function About() {
   return (
@@ -18,7 +18,8 @@ export default function About() {
                     <div className="relative">
                       <img
                         alt="..."
-                        src="https://via.placeholder.com/800"
+                        // src="https://via.placeholder.com/800"
+                        src="/media/profile-picture.jpg"
                         className="shadow-xl rounded-full h-auto align-middle border-none absolute -m-16 -ml-20 lg:-ml-16"
                         style={{ maxWidth: '150px' }}
                       />
@@ -62,13 +63,7 @@ export default function About() {
                 <div className="mt-10 py-10 border-t border-gray-300 text-center">
                   <div className="flex flex-wrap justify-center">
                     <div className="w-full lg:w-9/12 px-4">
-                      <p className="mb-4 text-lg leading-relaxed text-gray-800">
-                        An artist of considerable range, Jenna the name taken by
-                        Melbourne-raised, Brooklyn-based Nick Murphy writes,
-                        performs and records all of his own music, giving it a
-                        warm, intimate feel with a solid groove structure. An
-                        artist of considerable range.
-                      </p>
+                      <AboutMeText />
                     </div>
                   </div>
                 </div>
